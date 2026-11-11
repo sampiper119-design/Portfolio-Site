@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" href="data:,">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>WordBlocks: Twist Case Study - Samantha Piper</title>
+
+		<!-- Font Awesome Icons (v.6.4.0)-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+		<!-- Google Fonts Preconnect-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+		<!-- Google Fonts-->
+		<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Caveat:wght@400..700&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+		<!-- Local CSS stylesheet-->
+		<link rel="stylesheet" href="css/style.css">
+
+	</head>
+    <body class="case-study-page">
+        <!-- Nav Bar Section Starts-->
+		 <nav>
+			<div class="left-side">
+				<img src="images/my brandmark b&w 2.png" class="logo" height="30" alt="">
+				<h1>Samantha Piper</h1>
+			</div>
+
+            <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+
+			<div class="right-side" id="nav-menu">
+				<div class="nav-links">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="portfolio.html" class="active">Portfolio</a></li>
+						<li><a href="resume.html">Resume</a></li>
+					</ul>
+				</div>
+
+				<div class="social-icons">
+					<a href="https://www.linkedin.com/in/samantha-piper-33660840b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+					<a href="mailto:sampiper119@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email"><i class="far fa-envelope-open"></i></a>
+				</div>
+			</div>
+		 </nav>
+		<!-- Nav Bar Section Ends-->
+
+        <!-- Main Section -->
+        <div class="project-header case-study-header">
+            <h2>WordBlocks: Twist - 3D Version - Design Case Study</h2>
+            <h3>Interactive & Creative Coding</h3>
+        </div>
+
+        <!-- Case Study Layout Wrapper -->
+        <div class="case-study-wrapper">
+            
+            <!-- Left Vertical Tab Navigation -->
+            <aside class="vertical-tabs">
+                <nav class="sticky-tab-nav">
+                    <ul>
+                        <li><a href="#overview" class="active">Overview</a></li>
+                        <li><a href="#process">Process & Iterations</a></li>
+                        <li><a href="#challenges">The Challenges</a></li>
+                        <li><a href="#features">Key Features</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Main Content Body -->
+            <main class="case-study-content">
+                
+                <!-- Overview Section -->
+                <section id="overview" class="cs-section project-overview">
+                    <div class="overview-image">
+                        <video autoplay muted playsinline controls> <source src="media/WordBlocks 3D.mp4" type="video/mp4" aria-label="WordBlocks Game 3D version video demo"> Your browser does not support the video tag.</video>
+                    </div><br>
+
+                    <!-- GitHub Live Demo Link -->
+                     <p class="demo"><b>View Live GitHub Demo:</b> <a class="git-link" target="_blank" href="https://sampiper119-design.github.io/Word-Game-3D/">WordBlocks: Twist</a></p>
+
+                    <div class="overview-details">
+                        <p><b>Context:</b> Inspired by the Rubik's Cube and a curiousity to go beyond a 2D plane, 
+                            'WordBlocks: Twist' is an upgraded 3D evolution of the original WordBlocks game. The project 
+                            challenges players to navigate a three-dimensional puzzle space by selecting horizontal or vertical 
+                            slices and twisting them across the cube's axes to form words on any face. To support full board 
+                            exploration, the game features a rotation mechanic enabled by custom CSS matrix calculations. 
+                            Gameplay is further expanded by multi-face cross multipliers— which reward overlapping words 
+                            spanning across different cube faces with 2x combo bonuses— and an advanced power-up suite 
+                            featuring tile locking, slice freezing, and board reshuffling to help manage complex boards like 
+                            an 8x8x8 cube.</p>
+                        
+                        <p><b>Goal:</b> To explore gameplay mechanics in a 3D space and create a unique, enhanced WordBlocks 
+                            experience using custom 3D matrix math.</p>
+
+                        <div class="meta-info">
+                            <p><b>Timeline:</b> September 2026</p>
+                            <p><b>Tools:</b> <span class="tool-badge">Visual Studio Code</span> <span class="tool-badge">HTML5</span> <span class="tool-badge">CSS3</span> <span class="tool-badge">JavaScript</span></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Process Section (Styled like Screenshot) -->
+                <section id="process" class="cs-section process-section">
+                    <h2>Process & Iterations:</h2>
+                    <p class="section-intro">Because adapting WordBlocks into a 3D board required complex spatial maths, AI 
+                        assistants, such as Gemini and Claude, were utilized to prototype and test complex 3D math matrices, in 
+                        order to focus on manually improving the core gameplay loops, manage 3D state tracking, and fine-tune 
+                        responsive UI interactions.</p>
+
+                    <div class="process-card-grid">
+                    <!-- Step 1 Card (Single preview image, opens 4-sketch carousel in lightbox) -->
+                    <div class="process-step-card">
+                        <div class="step-image-box">
+                            <img src="media/controls.gif" alt="WordBlocks 3D Control demo" 
+                                data-step="1" data-index="0"
+                                data-gallery='["media/controls.gif"]'>
+                        </div>
+                        <div class="step-card-body">
+                            <h3>Step 1</h3>
+                            <p>Adapted established WordBlocks Game design and concept, and built a 3D puzzle board inspired by 
+                                Rubik's Cube mechanics. Then, programmed custom interactions, enabling players to select and 
+                                twist horizontal or vertical slices across the cube's axes to form words on 
+                                any face.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 Card (Single preview image, opens 2-iteration carousel in lightbox) -->
+                    <div class="process-step-card">
+                        <div class="step-image-box">
+                            <img src="media/rotation.gif" alt="WordBlocks 3D Rotation Mechanic Showcase" 
+                                data-step="2" data-index="0"
+                                data-gallery='["media/rotation.gif"]'>
+                        </div>
+                        <div class="step-card-body">
+                            <h3>Step 2</h3>
+                            <p>Programmed a rotation mechanic using CSS matrix math, allowing for smooth navigation and 
+                                full-board visibility around the entire 3D structure.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 Card (Single image final poster) -->
+                    <div class="process-step-card">
+                        <div class="step-image-box">
+                            <img src="images/power-ups.png" alt="WordBlocks 3D power-ups" 
+                                data-step="3" data-index="0"
+                                data-gallery='["images/power-ups.png"]'>
+                        </div>
+                        <div class="step-card-body">
+                            <h3>Step 3</h3>
+                            <p>Implemented complex state-tracking rules to look over overlapping words spanning across different 
+                                cube faces for 2x combo multipliers. Then, developed tactical power-ups&ndash; including tile 
+                                locking, slice freezing, and board reshuffling&ndash; to support more complex board sizes, like 
+                                an 8x8x8 cube.</p>
+                        </div>
+                    </div>
+                </div>
+                </section>
+
+                <hr class="cs-divider">
+
+                <!-- Challenges Section -->
+                <section id="challenges" class="cs-section challenges-section">
+                    <h2>The Challenges:</h2>
+                    <ul class="gold-bullet-list">
+                        <li><b>Adapting 2D Logic into a 3D Spatial Board:</b> Evolving the game mechanics of a flat 6x6 grid 
+                            into a 3D puzzle, that requires the handling of multi-face word parsing and spatial orientation.</li>
+                        <li><b>Complex 3D Matrix & Rotation Math:</b> Calculating and managing spatial transformations to ensure 
+                            smooth slice-twisting and rotation mechanics across all axes without breaking game state.</li>
+                        <li><b>Managing High-Density Scalability:</b> Balancing performance and user readability when scaling 
+                            the board to more complex, high-density configurations like an 8x8x8 cube.</li>
+                    </ul>
+                </section>
+
+                <hr class="cs-divider">
+
+                <!-- Key Features Section -->
+                <section id="features" class="cs-section features-section">
+                    <h2>Key Features & Highlights:</h2>
+                    <ul class="gold-bullet-list">
+                        <li><b>3D Slice-Twisting Mechanic:</b> Programmed a slice-twisting mechanic, inspired by the movements 
+                            of the Rubik's Cube, that allows players to select and twist horizontal and vertical slices across 
+                            the cube's axes to form words on any face.</li>
+                        <li><b>Dynamic View Rotation:</b> Implemented, via custom CSS matrix math, a rotation mechanic that 
+                            allows for smooth, full 360-degree navigation around the entire board.</li>
+                        <li><b>Multi-Face Cross Multipliers:</b> Developed a state-tracking algorithm that detects and scores 
+                            overlapping horizontal and vertical words spanning across different cube faces with 2x combo multipliers.</li>
+                        <li><b>Advanced Strategic Power-Ups:</b> Created a set of new gameplay power-ups&ndash; including Tile 
+                            Locking, Slice Freezing, and Board Reshuffling&ndash; to help players with harder boards.</li>
+                    </ul>
+                </section>
+
+                <!-- Project Navigation -->
+                <div class="project-footer-nav">
+                    <a href="WordBlocks.html" class="nav-link">&larr; Previous Project</a>
+                    <a href="Botanic_Bloom_Bistro.html" class="nav-link">Next Project &rarr;</a>
+                </div>
+
+            </main>
+        </div>
+
+        <!-- Footer Section Starts -->
+		 <footer>
+			<div class="footer-container">
+				<div class="footer-left">
+					<img src="images/my brandmark b&w 2.png" alt="Samantha Piper Logo" class="footer-logo" />
+
+					<div class="footer-info">
+						<h3>Feel Like Getting In Contact:</h3>
+						<p>Phone: (207) 660-8045 | Email: <a href="mailto:sampiper119@gmail.com">sampiper119@gmail.com</a></p>
+					</div>
+				</div>
+
+				<div class="footer-right">
+					<div class="social-icons">
+						<a href="https://www.linkedin.com/in/samantha-piper-33660840b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+						<a href="mailto:sampiper119@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email"><i class="far fa-envelope-open"></i></a>
+					</div>
+				</div>
+			</div>
+		 </footer>
+		<!-- Footer Section Ends -->
+
+        <!-- Lightbox Carousel Modal Overlay -->
+        <div id="image-lightbox" class="lightbox-modal">
+            <button class="lightbox-close" aria-label="Close Lightbox">&times;</button>
+            
+            <div class="lightbox-carousel-container">
+                <button class="lightbox-btn lightbox-prev" aria-label="Previous Image">&#10094;</button>
+                <div class="lightbox-slide-wrapper">
+                    <img class="lightbox-content" id="lightbox-img" alt="Enlarged process view">
+                </div>
+                <button class="lightbox-btn lightbox-next" aria-label="Next Image">&#10095;</button>
+            </div>
+
+            <div id="lightbox-caption"></div>
+            <div id="lightbox-counter">1 / 4</div>
+        </div>
+
+        <!-- Vertical Tab and LightBox Model JavaScript -->
+        <script src="case-study.js"></script>
+
+        <!-- Hamburger menu toggle -->
+		<script src="nav.js"></script>
+    </body>
+</html>

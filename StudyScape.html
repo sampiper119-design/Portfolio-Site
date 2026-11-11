@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" href="data:,">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>StudyScape Case Study - Samantha Piper</title>
+
+		<!-- Font Awesome Icons (v.6.4.0)-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+		<!-- Google Fonts Preconnect-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+		<!-- Google Fonts-->
+		<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Caveat:wght@400..700&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+		<!-- Local CSS stylesheet-->
+		<link rel="stylesheet" href="css/style.css">
+
+	</head>
+    <body class="case-study-page">
+        <!-- Nav Bar Section Starts-->
+		 <nav>
+			<div class="left-side">
+				<img src="images/my brandmark b&w 2.png" class="logo" height="30" alt="">
+				<h1>Samantha Piper</h1>
+			</div>
+
+            <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+
+			<div class="right-side" id="nav-menu">
+				<div class="nav-links">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="portfolio.html" class="active">Portfolio</a></li>
+						<li><a href="resume.html">Resume</a></li>
+					</ul>
+				</div>
+
+				<div class="social-icons">
+					<a href="https://www.linkedin.com/in/samantha-piper-33660840b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+					<a href="mailto:sampiper119@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email"><i class="far fa-envelope-open"></i></a>
+				</div>
+			</div>
+		 </nav>
+		<!-- Nav Bar Section Ends-->
+
+        <!-- Main Section -->
+        <div class="project-header case-study-header">
+            <h2>StudyScape: Ambient Pomodoro-Style Program - Design Case Study</h2>
+            <h3>Interactive & Creative Coding</h3>
+        </div>
+
+        <!-- Case Study Layout Wrapper -->
+        <div class="case-study-wrapper">
+            
+            <!-- Left Vertical Tab Navigation -->
+            <aside class="vertical-tabs">
+                <nav class="sticky-tab-nav">
+                    <ul>
+                        <li><a href="#overview" class="active">Overview</a></li>
+                        <li><a href="#process">Process & Iterations</a></li>
+                        <li><a href="#challenges">The Challenges</a></li>
+                        <li><a href="#features">Key Features</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Main Content Body -->
+            <main class="case-study-content">
+                
+                <!-- Overview Section -->
+                <section id="overview" class="cs-section project-overview">
+                    <!-- StudyScape Scene Carousel -->
+                    <div class="carousel-container">
+                        <div class="carousel-track-container">
+                            <ul class="carousel-track">
+                                <!-- Slide 1: Rainy City Scene -->
+                                <li class="carousel-slide current-slide">
+                                    <img src="images/studyscape.png" alt="StudyScape - Rainy City Scene with Particle Rain" class="carousel-image">
+                                    <div class="carousel-caption">
+                                        <h4>Rainy City Scene</h4>
+                                        <p>Features directional particle rain physics and glowing window tile matrices.</p>
+                                    </div>
+                                </li>
+
+                                <!-- Slide 2: Autumn Nook Scene -->
+                                <li class="carousel-slide">
+                                    <img src="images/scene one.png" alt="StudyScape - Autumn Nook Scene with Falling Leaves" class="carousel-image">
+                                    <div class="carousel-caption">
+                                        <h4>Autumn Nook Scene</h4>
+                                        <p>Simulates drifting leaf forces and warm sunset gradient canvases.</p>
+                                    </div>
+                                </li>
+
+                                <!-- Slide 3: Starry Night Scene -->
+                                <li class="carousel-slide">
+                                    <img src="images/scene two.png" alt="StudyScape - Starry Night Scene with Telescope" class="carousel-image">
+                                    <div class="carousel-caption">
+                                        <h4>Starry Night Scene</h4>
+                                        <p>Highlights interactive constellation nodes and ambient lunar lighting.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Navigation Arrows -->
+                        <button class="carousel-button carousel-button-left" aria-label="Previous Slide">&larr;</button>
+                        <button class="carousel-button carousel-button-right" aria-label="Next Slide">&rarr;</button>
+
+                        <!-- Navigation Dots Indicator -->
+                        <div class="carousel-nav">
+                            <button class="carousel-indicator current-slide" aria-label="Slide 1"></button>
+                            <button class="carousel-indicator" aria-label="Slide 2"></button>
+                            <button class="carousel-indicator" aria-label="Slide 3"></button>
+                        </div>
+                    </div>
+
+                    <!-- GitHub Live Demo Link -->
+                     <p class="demo"><b>View Live GitHub Demo:</b> <a class="git-link" target="_blank" href="https://sampiper119-design.github.io/Study-Background-Project/">StudyScape: Ambient Pomodoro-Style Program</a></p>
+
+                    <div class="overview-details">
+                        <p><b>Context:</b> Developed as an exploration of visual design and interactive media, StudyScape is an 
+                            ambient, interactive study timer that bridges detailed visual appeal with solid functional logic. 
+                            Built entirely in p5.js, the project utilizes a clean, object-oriented model to seamlessly integrate 
+                            time management with dynamic nature scene visuals. To ensure smooth performance, static background 
+                            layers like skylines and sunsets were pre-rendered onto offscreen graphics buffers, preventing 
+                            redundant frame drawing. Additionally, the interactive scenes come alive through custom particle 
+                            physics that simulate realistic phenomena, such as raindrops on a window, autumn leaves in the wind, 
+                            and twinkling constellations and shooting stars.<br><br> Regarding the study timer, a finite state 
+                            machine (FSM) manages timer transitions— handling complex edge cases like late duration changes— 
+                            while a responsive DOM control panel keeps the UI synchronized in real time. Ultimately, StudyScape 
+                            functions as an immersive productivity tool that showcases advanced creative coding mechanics 
+                            alongside polished user experience design.</p>
+                        
+                        <p><b>Goal:</b> To explore the combination of visual design and interactive media by building an ambient 
+                            productivity tool containing dynamic visuals, custom particle physics, a finite state machine timer, 
+                            and responsive DOM controls.</p>
+
+                        <div class="meta-info">
+                            <p><b>Timeline:</b> July 2026</p>
+                            <p><b>Tools:</b> <span class="tool-badge">Visual Studio Code</span> <span class="tool-badge">p5.js</span></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Process Section (Styled like Screenshot) -->
+                <section id="process" class="cs-section process-section">
+                    <h2>Process & Iterations:</h2>
+                    <p class="section-intro">Consulted Claude AI for initial concept brainstorming, before diving into p5.js and 
+                        receiving further stuctural assistance with building the visuals, Finite State Machine timer mechanics, 
+                        and custom particle physics.</p>
+
+                    <div class="process-card-grid">
+                        <div class="process-step-card">
+                            <div class="step-image-box">
+                                <img src="images/flowchart.png" alt="StudyScape finite state machine timer mechanics flowchart" data-step="1" data-index="0" data-gallery='["images/flowchart.png"]'>
+                            </div>
+                            <div class="step-card-body">
+                                <h3>Step 1</h3>
+                                <p>Designed and built the foundational mechanism of the entire project using a clean, object-oriented p5.js structured (sketch, Timer, 
+                                    Background, Particles, and DOM javascript files). Then, developed a Finite State Machine (FSM) to handle timer states (idle, 
+                                    studying, onBreak, and paused), and created logic for edge cases, such as delaying duration updates right before a session ends</p>
+                            </div>
+                        </div>
+
+                        <div class="process-step-card">
+                            <div class="step-image-box">
+                                <img src="media/city.gif" alt="Gif of animated scene" data-step="2" data-index="1" data-gallery='["media/city.gif", "media/sunset.gif", "media/starry-night.gif"]'>
+                            </div>
+                            <div class="step-card-body">
+                                <h3>Step 2</h3>
+                                <p>Programmed custom particle physics to simulate realistic scene animations, including raindrops on a window, wind-swept falling 
+                                    leaves, and twinkling constellations. Then, to maintain a smooth frame rate through animation, upgraded rendering performance by 
+                                    storing static background layers (skyline, sunset, hills) to offscreen graphics buffers (taking a snapshot of the graphic), rather 
+                                    than redrawing them every frame.</p>
+                            </div>
+                        </div>
+
+                        <div class="process-step-card">
+                            <div class="step-image-box">
+                                <img src="images/studyscape.png" alt="Final product with timer displayed" data-step="3" data-index="2" data-gallery='["images/studyscape.png", "images/sunset.png", "images/starry-night.png"]'>
+                            </div>
+                            <div class="step-card-body">
+                                <h3>Step 3</h3>
+                                <p>Built and integrated a responsive DOM control panel to manage the timer and canvas states (switching between scenes) in real time. 
+                                    Created intuitive user experience limitations&ndash; such as automatically disabling timer selections during active break 
+                                    sessions&ndash; to ensure seamless function and interaction.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="cs-divider">
+
+                <!-- Challenges Section -->
+                <section id="challenges" class="cs-section challenges-section">
+                    <h2>The Challenges:</h2>
+                    <ul class="gold-bullet-list">
+                        <li><b>Performance Enhancement with Complex Ambient Visuals:</b> Balancing complex visual appeal&mdash; such as continuous animation particle 
+                            physics&mdash; with smooth frame rates by storing static background layers onto graphics buffers (as snapshots).</li>
+                        <li><b>Stable Timer State Management & Edge Cases:</b> Designing a reliable Finite State Machine (FSM) to handle state transitions (idle, 
+                            studying, onBreak, paused), while managing edge cases like delaying timer updates if timer settings are changed right at the end of a 
+                            session.</li>
+                        <li><b>Real-Time UI & Canvas Synchronization:</b> Building a responsive DOM control panel that maintains seamless state synchronization with 
+                            the canvas, including enforcing UX limitations like locking timer selections during active break sessions.</li>
+                    </ul>
+                </section>
+
+                <hr class="cs-divider">
+
+                <!-- Key Features Section -->
+                <section id="features" class="cs-section features-section">
+                    <h2>Key Features & Highlights:</h2>
+                    <ul class="gold-bullet-list">
+                        <li><b>Ambient Environment & Custom Particle Physics:</b> Features dynamic, vector-drawn scenes and simulated continuous animations&mdash; 
+                            including rain drops with residual trails, wind-swept falling leaves, and twinkling constellations and shooting stars.</li>
+                        <li><b>Performance-Driven Rendering:</b> Utilized offscreen graphics buffers to pre-render a stored snapshot of each background layer, 
+                            preventing redundant redrawing across frames.</li>
+                        <li><b>Finite State Machine (FSM) Model:</b> Built a clean, object-oriented timer engine that reliably manages state transitions and edge-case 
+                            behaviours.</li>
+                        <li><b>Live DOM UI Syncing:</b> Integrated a responsive control panel that manages real-time state changes between the user interface and the 
+                            canvas, while providing intuitive UX limitations.</li>
+                        <li><b>Modular Object-Oriented Setup:</b> Structured the code into a clean, manageable model, separated into modules (Timer, Background, 
+                            Particles, DOM)</li>
+                    </ul>
+                </section>
+
+                <!-- Project Navigation -->
+                <div class="project-footer-nav">
+                    <a href="Stars_Align.html" class="nav-link">&larr; Previous Project</a>
+                    <a href="WordBlocks.html" class="nav-link">Next Project &rarr;</a>
+                </div>
+
+            </main>
+        </div>
+
+        <!-- Footer Section Starts -->
+		 <footer>
+			<div class="footer-container">
+				<div class="footer-left">
+					<img src="images/my brandmark b&w 2.png" alt="Samantha Piper Logo" class="footer-logo" />
+
+					<div class="footer-info">
+						<h3>Feel Like Getting In Contact:</h3>
+						<p>Phone: (207) 660-8045 | Email: <a href="mailto:sampiper119@gmail.com">sampiper119@gmail.com</a></p>
+					</div>
+				</div>
+
+				<div class="footer-right">
+					<div class="social-icons">
+						<a href="https://www.linkedin.com/in/samantha-piper-33660840b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+						<a href="mailto:sampiper119@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email"><i class="far fa-envelope-open"></i></a>
+					</div>
+				</div>
+			</div>
+		 </footer>
+		<!-- Footer Section Ends -->
+
+        <!-- Lightbox Carousel Modal Overlay -->
+        <div id="image-lightbox" class="lightbox-modal">
+            <button class="lightbox-close" aria-label="Close Lightbox">&times;</button>
+            
+            <div class="lightbox-carousel-container">
+                <button class="lightbox-btn lightbox-prev" aria-label="Previous Image">&#10094;</button>
+                <div class="lightbox-slide-wrapper">
+                    <img class="lightbox-content" id="lightbox-img" alt="Enlarged process view">
+                </div>
+                <button class="lightbox-btn lightbox-next" aria-label="Next Image">&#10095;</button>
+            </div>
+
+            <div id="lightbox-caption"></div>
+            <div id="lightbox-counter">1 / 4</div>
+        </div>
+
+        <!-- Vertical Tab and LightBox Model JavaScript -->
+        <script src="case-study.js"></script>
+
+        <!-- Hamburger menu toggle -->
+		<script src="nav.js"></script>
+    </body>
+</html>

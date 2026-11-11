@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<link rel="icon" href="data:,">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Samantha Piper - Resume</title>
+
+	<!-- Font Awesome Icons (v.6.4.0)-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+	<!-- Google Fonts Preconnect-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<!-- Google Fonts-->
+	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Caveat:wght@400..700&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+	<!-- Local CSS stylesheet-->
+	<link rel="stylesheet" href="css/style.css">
+
+	<script type="text/javascript" src="p5/p5.min.js"></script>
+	<script type="text/javascript" src="resume-sketch.js"></script>
+</head>
+<body class="resume-page">
+    <!-- Nav Bar Section Starts-->
+	 <nav>
+		<div class="left-side">
+			<img src="images/my brandmark b&w 2.png" class="logo" height="30" alt="">
+			<h1>Samantha Piper</h1>
+		</div>
+
+		<button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+
+		<div class="right-side" id="nav-menu">
+			<div class="nav-links">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="portfolio.html">Portfolio</a></li>
+					<li><a href="resume.html" class="active">Resume</a></li>
+				</ul>
+			</div>
+
+			<div class="social-icons">
+				<a href="https://www.linkedin.com/in/samantha-piper-33660840b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+				<a href="mailto:sampiper119@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email"><i class="far fa-envelope-open"></i></a>
+			</div>
+		</div>
+	 </nav>
+	<!-- Nav Bar Section Ends-->
+
+    <!-- Hero Section Starts-->
+     <section class="hero-section">
+        <div id="hero-container"></div>
+        <div class="hero-content">
+            <h1>Resume & Qualifications</h1>
+            <h2>Front End Developer & Visual UI Designer</h2>
+            <p>A timeline breakdown of technical skills, academic achievements, and development experience.</p>
+            <a href="PIPER_SAMANTHA_Resume.pdf" target="_blank">Download PDF Resume</a>
+        </div>
+     </section>
+    <!-- Hero Section Ends-->
+
+	<!-- Resume Viewer Section Starts-->
+    <section class="resume-viewer-section">
+        <div class="resume-container">
+            <div class="resume-actions">
+                <span class="viewer-title"><i class="far fa-file-pdf"></i> PIPER_SAMANTHA_Resume.pdf</span>
+                <div class="action-buttons">
+                    <a href="PIPER_SAMANTHA_Resume.pdf" target="_blank" class="action-btn secondary-btn"><i class="fas fa-external-link-alt"></i> Open Fullscreen</a>
+                    <a href="PIPER_SAMANTHA_Resume.pdf" download="PIPER_SAMANTHA_Resume" class="action-btn primary-btn"><i class="fas fa-download"></i> Download PDF</a>
+                </div>
+            </div>
+
+            <div class="pdf-wrapper">
+                <iframe src="PIPER_SAMANTHA_Resume.pdf#toolbar=1&navpanes=0&scrollbar=1" title="Samantha Piper Resume PDF">
+                    <p>Your browser does not support embedded PDFs. <a href="PIPER_SAMANTHA_Resume.pdf">Click here to download the PDF directly.</a></p>
+                </iframe>
+            </div>
+        </div>
+    </section>
+    <!-- Resume Viewer Section Ends-->
+
+    <!-- Footer Section Starts -->
+	 <footer>
+		<div class="footer-container">
+			<div class="footer-left">
+			    <img src="images/my brandmark b&w 2.png" alt="Samantha Piper Logo" class="footer-logo" />
+
+			    <div class="footer-info">
+			        <h3>Feel Like Getting In Contact:</h3>
+					<p>Phone: (207) 660-8045 | Email: <a href="mailto:sampiper119@gmail.com">sampiper119@gmail.com</a></p>
+				</div>
+			</div>
+
+			<div class="footer-right">
+				<div class="social-icons">
+					<a href="https://www.linkedin.com/in/samantha-piper-33660840b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+					<a href="mailto:sampiper119@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email"><i class="far fa-envelope-open"></i></a>
+				</div>
+			</div>
+		</div>
+	 </footer>
+	<!-- Footer Section Ends -->
+
+	<!-- Hamburger menu toggle -->
+		<script src="nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" href="data:,">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Samantha Piper - Portfolio</title>
+
+		<!-- Font Awesome Icons (v.6.4.0)-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+		<!-- Google Fonts Preconnect-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+		<!-- Google Fonts-->
+		<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Caveat:wght@400..700&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+		<!-- Local CSS stylesheet-->
+		<link rel="stylesheet" href="css/style.css">
+
+		<script type="text/javascript" src="p5/p5.min.js"></script>
+		<script type="text/javascript" src="sketch.js"></script>
+	</head>
+
+	<body>
+		<!-- Nav Bar Section Starts-->
+		 <nav>
+			<div class="left-side">
+				<img src="images/my brandmark b&w 2.png" class="logo" height="30" alt="">
+				<h1>Samantha Piper</h1>
+			</div>
+
+			<button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+
+			<div class="right-side" id="nav-menu">
+				<div class="nav-links">
+					<ul>
+						<li><a href="index.html" class="active">Home</a></li>
+						<li><a href="portfolio.html">Portfolio</a></li>
+						<li><a href="resume.html">Resume</a></li>
+					</ul>
+				</div>
+
+				<div class="social-icons">
+					<a href="https://www.linkedin.com/in/samantha-piper-33660840b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+					<a href="mailto:sampiper119@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email"><i class="far fa-envelope-open"></i></a>
+					<a href="https://github.com/sampiper119-design?tab=repositories" target="_blank" aria-label="GitHub Link" rel="noopener noreferrer"><i class="fab fa-github-alt"></i></a>
+				</div>
+			</div>
+		 </nav>
+		<!-- Nav Bar Section Ends-->
+		<!-- Hero Section Starts-->
+		 <section class="hero-section">
+			<div id="hero-container"></div>
+			<div class="hero-content">
+				<h1>My Portfolio</h1>
+				<h2>Front End Developer & Visual UI Designer</h2>
+				<p>Creating thoughtful digital user experiences through front-end web programming, visual design systems, and creative interactive media.</p>
+				<a href="portfolio.html">View My Portfolio</a>
+			</div>
+		 </section>
+		<!-- Hero Section Ends-->
+
+		<!-- Featured Section Starts-->
+		 <section class="featured-section">
+			<div class="featured-container">
+				<h2 class="section-title">Featured Projects</h2>
+
+				<div class="featured-grid">
+					<div class="featured-card">
+						<div class="card-image-wrapper">
+							<img src="images/botanic bistro.png" alt="Website Project Preview" class="card-image" />
+						</div>
+						<div class="card-body">
+							<div class="badges">
+								<span class="category-badge">Web Development</span>
+								<span class="category-badge">Brand Identity</span>
+							</div>
+						<h3 class="card-title">Botanic Bloom Bistro Website & Brand Identity System </h3>
+						<p class="card-description"> Designed and developed a complete brand identity system and front-end website for an original, conceptual 
+							restaurant brand. This project bridges graphic design and interactive web development— combining custom brand 
+							collateral with a responsive, feature-rich web application.</p>
+						
+						<div class="tech-tags">
+							<span class="tag">HTML</span>
+							<span class="tag">CSS</span>
+							<span class="tag">JavaScript</span>
+							<span class="tag">Illustrator</span>
+						</div>
+
+						<a href="Botanic_Bloom_Bistro.html" class="card-btn">View Case Study</a>
+						</div>
+					</div>
+
+					<div class="featured-card">
+						<div class="card-image-wrapper">
+							<img src="images/wordblocks.png" alt="Game Project Preview" class="card-image" />
+						</div>
+						<div class="card-body">
+						<span class="category-badge">Interactive & Creative Coding</span>
+						<h3 class="card-title">WordBlocks Game</h3>
+						<p class="card-description">An interactive, web-based word puzzle game that combines the tile-sliding mechanics of 2048 with 
+							the word-building of Scrabble. The game challenges players to slide letter tiles across a 6x6 grid using keyboard or swipe controls to 
+							form words before the board fills up. It features custom scoring algorithms, wildcard tiles, grid-clearing power-ups, and an automated 
+							endgame sweep.</p>
+						
+						<div class="tech-tags">
+							<span class="tag">HTML</span>
+							<span class="tag">CSS</span>
+							<span class="tag">JavaScript</span>
+						</div>
+
+						<a href="WordBlocks.html" class="card-btn">View Case Study</a>
+						</div>
+					</div>
+
+					<div class="featured-card">
+						<div class="card-image-wrapper">
+							<img src="images/alphabet.png" alt="Graphic Design Project Preview" class="card-image" />
+						</div>
+						<div class="card-body">
+						<span class="category-badge">Visual & Graphic Design</span>
+						<h3 class="card-title">Alphabet Project</h3>
+						<p class="card-description">A typographic and visual design study inspired by Pentagram’s Osh Gallery Alphabet. Guided 
+							by Gestalt principles, this project explores the boundaries between legibility and abstraction— deconstructing all 26 letterforms into an 
+							evolving narrative story. Early letters begin as minimalist, geometric foundations, and progressively escalate into more intricate, motif-driven 
+							visual identities.</p>
+						
+						<div class="tech-tags">
+							<span class="tag">Adobe Illustrator</span>
+						</div>
+
+						<a href="Alphabet_Project.html" class="card-btn">View Case Study</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		 </section>
+		<!-- Featured Section Ends-->
+
+		<hr class="break">
+
+		<!-- About Section Starts-->
+		 <section class="about-section">
+			<div class="about-container">
+				<div class="about-txt">
+					<h1>About Me</h1>
+					<p>I grew up programming— spending my free time experimenting with new ideas and languages, and challenging myself to create increasingly intricate 
+						projects. Along the way, I developed a deep interest in visual design— creating posters, logos, and other forms of branding collateral for 
+						school clubs and personal works.<br><br>
+
+						I've always been drawn to the subtle details that elevate a digital experience. Designing from a more human-centered perspective allows me to 
+						ensure I create work that is not only functional and intuitive, but thoughtful, engaging, and visually compelling.<br><br>
+
+						Studying New Media Interactive Development gives me a way to bridge programming and design into meaningful creative solutions— building 
+						programs that help to communicate something important.</p>
+
+					<a href="resume.html">View My Resume</a>
+				</div>
+
+				<div class="about-img">
+					<img src="images/me.jpg">
+				</div>
+			</div>
+		 </section>
+		<!-- About Section Ends-->
+
+		<!-- Footer Section Starts -->
+		 <footer>
+			<div class="footer-container">
+				<div class="footer-left">
+					<img src="images/my brandmark b&w 2.png" alt="Samantha Piper Logo" class="footer-logo" />
+
+					<div class="footer-info">
+						<h3>Feel Like Getting In Contact:</h3>
+						<p>Phone: (207) 660-8045 | Email: <a href="mailto:sampiper119@gmail.com">sampiper119@gmail.com</a></p>
+					</div>
+				</div>
+
+				<div class="footer-right">
+					<div class="social-icons">
+						<a href="https://www.linkedin.com/in/samantha-piper-33660840b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+						<a href="mailto:sampiper119@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email"><i class="far fa-envelope-open"></i></a>
+						<a href="https://github.com/sampiper119-design?tab=repositories" target="_blank" aria-label="GitHub Link" rel="noopener noreferrer"><i class="fab fa-github-alt"></i></a>
+					</div>
+				</div>
+			</div>
+		 </footer>
+		<!-- Footer Section Ends -->
+
+		<!-- Hamburger menu toggle -->
+		<script src="nav.js"></script>
+	</body>
+
+</html>

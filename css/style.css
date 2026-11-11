@@ -1,0 +1,1627 @@
+/*--------------------- Base Style Settings ---------------------------- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #702963;
+    --accent-color: #d7b442;
+    --border-color: #C7A021;
+    --bg-color: rgba(242, 232, 211, 0.12);
+    --headingText-color: #2A1744;
+    --text-color: #333;
+    --solidBgText-color: #FFF;
+    --accentText-color: #555;
+
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'Lora', serif;
+    --font-title: 'Caveat', cursive;
+}
+
+html, body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--text-color);
+    background-color: #FAF8FC;
+    line-height: 1.5;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* --------------------- Navbar Style Settings ---------------------------- */
+nav {
+    padding: 4px 30px;
+    width: 100%;
+    background: var(--primary-color);
+    color: var(--solidBgText-color);
+    border-bottom: 1px solid #4a1c42;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+}
+
+nav .left-side {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+nav .logo img {
+    width: auto;
+    display: block;
+}
+
+nav h1 {
+    font-family: var(--font-title);
+    font-size: 27px;
+    font-weight: 500;
+    padding-top: 2px;
+}
+
+nav .right-side {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: var(--solidBgText-color);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.2s ease;
+}
+
+nav .active {
+    color: #ffdf80;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    color: #ffdf80;
+}
+
+.social-icons {
+    display: flex;
+    gap: 14px;
+}
+
+.social-icons a {
+    color: var(--solidBgText-color);
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.2s ease;
+}
+
+.social-icons a:hover {
+    color: #ffdf80;
+}
+
+/* ------------------- Hero Section Style Settings ---------------------- */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    min-height: 400px;
+    overflow: hidden;
+}
+
+#hero-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 100%;
+    margin-left: 50px;
+    padding-bottom: 60px;
+    color: var(--solidBgText-color);
+    pointer-events: none;
+}
+
+.hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: 34px;
+    margin-bottom: 0px;
+}
+
+.hero-content h2 {
+    font-family: var(--font-heading);
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    max-width: 580px;
+}
+
+.hero-content a {
+    pointer-events: auto; 
+    padding: 10px 24px;
+    background-color: var(--accent-color);
+    border: 1px solid var(--border-color);
+    color: var(--solidBgText-color);
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-weight: bold;
+    display: inline-block;
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+}
+
+.hero-content a:hover {
+    background-color: #c7a021;
+}
+
+/* -------------------------------- FEATURED PROJECTS SECTION -------------------------------------- */
+.featured-section {
+    padding: 80px 10%;
+    background-color: #FAF8FC;
+}
+
+.featured-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portfolio-page .featured-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left !important;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--headingText-color);
+    margin-bottom: 40px;
+}
+
+/* Unified Grid Container (Flexbox for perfect left-alignment when filtered) */
+.featured-grid,
+.portfolio-page .featured-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Aligns remaining cards to the left */
+    gap: 30px;                   /* Matches your original 30px gap */
+    width: 100%;
+}
+
+/* Force each card to take up exactly 1/3 of the row minus gap math */
+.featured-card,
+.portfolio-page .featured-grid .featured-card {
+    width: calc((100% - (2 * 30px)) / 3); /* Math using exact 30px gap */
+    box-sizing: border-box;
+    background-color: #F2EBF4;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Ensure filtered hidden cards completely vanish without holding grid space */
+.hide-card,
+.portfolio-page .featured-card.hide-card {
+    display: none !important;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Pushes content to fill height */
+}
+
+.featured-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(30, 19, 43, 0.15);
+}
+
+.card-image-wrapper {
+    width: 100%;
+    height: 220px;
+    background-color: #f7f7f7;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-bottom: 1px solid #333333;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.03)
+}
+
+.placeholder-wrapper {
+    background-color: #f9f9f9;
+}
+
+.placeholder-icon {
+    font-size: 4rem;
+    color: #555555;
+}
+
+.card-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.badges {
+    display: flex;
+    gap: 10px;
+}
+
+.category-badge {
+    font-family: var(--font-heading);
+    font-size: 13px;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 3px 12px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 12px;
+}
+
+.card-title {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--headingText-color);
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #444444;
+    margin-bottom: 20px;
+}
+
+.tech-tags {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    font-family: var(--font-heading);
+    font-size: 13px;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 3px 12px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.card-btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--headingText-color);
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    margin-top: auto; /* Pins button to the very bottom of the card */
+
+}
+
+/* --------------- Horizontal Break Style Settings ------------------ */
+.break {
+    max-width: 80%;
+    margin: 60px auto;
+    border: none;
+    border-top: 1px solid #2A1744;
+    opacity: 0.15;
+}
+
+/* ------------------------- About Section Style Settings -------------------------- */
+.about-section {
+    padding: 40px 10% 80px;
+    background-color: #FAF8FC;
+}
+
+.about-container {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.about-txt p {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+.about-txt a {
+    display: inline-block;
+    background-color: var(--accent-color);
+    border: 1px solid var(--border-color);
+    color: var(--solidBgText-color);
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.about-img {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.about-img img {
+    width: auto;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid rgb(42, 23, 68, 0.5);
+    box-shadow: 0 8px 24px rgba(30, 19, 43, 0.12);
+}
+
+/* ------------------------- Footer Style Settings -------------------------- */
+footer {
+  width: 100%;
+  background-color: var(--primary-color); /* Deep dark plum background */
+  color: var(--solidBgText-color);
+  margin-top: 30px;
+  padding: 20px 80px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-logo {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.footer-info h3 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--solidBgText-color);
+  margin-bottom: 2px;
+}
+
+.footer-info p {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--solidBgText-color);
+}
+
+.footer-info p a {
+  color: var(--solidBgText-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-info p a:hover {
+  color: #ffdf80;
+}
+
+.footer-right .social-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-right .social-icons a {
+  color: var(--solidBgText-color);
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-right .social-icons a:hover {
+  color: #ffdf80;
+}
+
+/* Mobile Responsiveness for Footer */
+@media (max-width: 768px) {
+  footer {
+    padding: 30px 20px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-left {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* --------------------- Responsive Breakpoints ---------------------------- */
+@media (max-width: 992px) {
+    .about-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .about-img img {
+        width: 240px;
+        height: 240px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-content {
+        margin-left: 20px;
+    }
+
+    nav {
+        padding: 10px 15px;
+    }
+}
+
+/* ----------------------------- Portfolio Page Style Settings ---------------------------------------- */
+.portfolio-page .hero-section {
+    height: 350px;
+}
+
+/* --------------------------- Projects Section Style Settings ------------------------------ */
+
+.portfolio-page .featured-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.portfolio-page .featured-card {
+    /* Set card width for 3 items per row minus gaps */
+    width: calc(33.333% - 20px); 
+    min-width: 280px;
+}
+
+/* -------------------------- FILTER BAR STYLES ------------------------ */
+.filter-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.filter-label {
+    font-family: 'Lora', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    line-height: 2.2rem;
+    white-space: nowrap;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0.75rem 1rem;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+/* Individual Filter Buttons */
+.filter-btn {
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    background-color: white;
+    color: var(--text-color);
+    border: 1px solid var(--accent-color);
+    padding: 0.45rem 1.25rem;
+    border-radius: 0px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s ease-in-out;
+}
+
+.filter-btn:hover {
+    background-color: #f9f5ec;
+}
+
+/* Active Selected Filter State */
+.filter-btn.active {
+    background-color: var(--accent-color);
+    color: #2A1744;
+    border-color: var(--border-color);
+}
+
+/* Reset "X" Button */
+.filter-reset-btn {
+    font-family: 'Lora', serif;
+    font-size: 1.1rem;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 0.2rem 0.5rem;
+    margin-left: 0.5rem;
+    transition: opacity 0.2s ease, color 0.2s ease;
+    display: inline-block;
+}
+
+.filter-reset-btn:hover {
+    color: var(--accent-color);
+}
+
+/* Smooth Card Transition for Filtering */
+.featured-card {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.featured-card.hide-card {
+    display: none !important;
+}
+
+/* ------------------------ Mini Experiments Style Settings ----------------------------- */
+.featured-section.mini-experiments {
+    background-color: rgb(243, 237, 224, 0.2);
+    padding: 60px 80px;
+    margin-bottom: 80px;
+}
+
+/* Grid container specifically for the 2 Mini Experiment cards */
+.mini-experiments .featured-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Aligns cards to the left */
+    gap: 2rem;
+    max-width: 1200px; /* Matches main featured container width */
+    margin: 0 auto;   /* Keeps section content bound within bounds */
+}
+
+/* Constrain card widths so they match top grid card sizing */
+.mini-experiments .featured-card {
+    width: calc((100% - (2 * 2rem)) / 3); /* Forces cards to take up exactly 1/3 slot each */
+    min-width: 300px; /* Ensures responsiveness on mobile screens */
+}
+
+/* ------------------------------- Case Study Pages Style Settings ------------------------------*/
+/* Ensure the body and page wrappers allow natural window scrolling */
+body.case-study-page {
+    overflow: visible !important;
+    height: auto !important;
+}
+
+body.case-study-page p, body.case-study-page {
+    font-size: 1.1em;
+}
+
+.case-study-header {
+    margin: 3rem auto 1rem;
+    max-width: 1200px;
+    padding: 0 2rem;
+}
+
+.case-study-header h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2em;
+    color: var(--headingText-color);
+}
+
+.case-study-header h3 {
+    font-size: 1.25em;
+    color: var(--accentText-color);
+}
+
+/* Two-Column Page Layout */
+.case-study-wrapper {
+    display: flex !important;
+    align-items: flex-start !important;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    gap: 2.5rem;
+    overflow: visible !important;
+}
+
+/* Sidebar Container */
+.case-study-page .vertical-tabs {
+    width: 200px !important;
+    min-width: 200px !important;
+    flex-shrink: 0 !important;
+    position: relative;
+    align-self: stretch !important;
+}
+
+/* Sticky Navigation Wrapper */
+.case-study-page .sticky-tab-nav {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 100px;
+    z-index: 10;
+    display: block !important;
+    width: auto !important;
+    padding: 0 !important;
+    border-bottom: none !important;
+}
+
+.case-study-page .vertical-tabs,
+.case-study-page .sticky-tab-nav {
+    background-color: transparent !important;
+    background: none !important;
+}
+
+/* Unordered List Line Container */
+.case-study-page .sticky-tab-nav ul {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+    border-left: 2px solid #E5DCEB !important;
+    padding-left: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+}
+
+.case-study-page .sticky-tab-nav ul li {
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 0.5rem !important;
+    background: transparent !important;
+}
+
+.case-study-page .sticky-tab-nav ul li a {
+    display: block !important;
+    white-space: nowrap !important; /* Prevents text from breaking into multi-line blocks */
+    padding: 0.5rem 1rem !important;
+    color: #4A3B5C !important;
+    text-decoration: none !important;
+    background: transparent !important;
+    transition: color 0.2s ease;
+}
+
+.case-study-page .sticky-tab-nav ul li a:hover {
+    color: #702963 !important;
+}
+
+.case-study-page .sticky-tab-nav ul li a.active {
+    color: #702963 !important;
+    font-weight: 700 !important;
+    border-left: 3px solid #D4AF37 !important;
+    margin-left: -2px !important;
+    background: transparent !important;
+}
+
+/* Ensure the main content area respects the sidebar space */
+.case-study-content {
+    flex: 1;
+    min-width: 0; /* Prevents image/grid overflow from breaking flex layout */
+    overflow: visible !important;
+}
+
+.cs-section {
+    margin-bottom: 3.5rem;
+    scroll-margin-top: 100px; /* Offset for smooth scroll positioning */
+}
+
+.cs-section h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #2b1f3d;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.section-intro {
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Overview Layout */
+.overview-image img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.overview-details p {
+    font-family: 'Lora', serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.demo {
+    margin-bottom: 1rem;
+}
+
+.git-link:link {
+    color: var(--primary-color);
+    text-decoration: 1.5px solid underline;
+    font-weight: bold;
+}
+
+.git-link:hover {
+    color: #5d2253;
+}
+
+.git-link:active {
+    color: #b44b6e;
+}
+
+.git-link:visited {
+    color: var(--primary-color);
+}
+
+.case-btns {
+    display: flex;
+    max-width: 100%;
+    margin: 0 auto 3rem;
+    gap: 1rem;
+    padding-left: 5.5rem;
+}
+
+.website .case-btns {
+    padding-left: 0 !important;
+}
+
+.case-btns a:link {
+    background-color: var(--accent-color);
+    color: var(--headingText-color);
+    border: 1px solid var(--border-color);
+    text-decoration: none;
+    padding: 0.625rem 0.75rem;
+    width: 43.5%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.meta-info {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #E5DCEB;
+}
+
+/* Process Section (Matching Screenshot Card Style) */
+.process-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.process-step-card {
+    background-color: #F2EBF4; /* Warm background matching screenshots */
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.step-image-box {
+    height: 200px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+.step-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.step-image-box img:hover {
+    opacity: 0.9;
+}
+
+/* multi-image grid for Step 1 (4 sketches) */
+.step-image-box.multi-image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2px;
+    height: 180px; /* Matches standard card image height */
+    background-color: #ddd;
+}
+
+.step-image-box.multi-image-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* multi-image stack for Step 2 (2 iterations) */
+.step-image-box.multi-image-stack {
+    display: flex;
+    gap: 2px;
+    height: 180px;
+    background-color: #ddd;
+}
+
+.step-image-box.multi-image-stack img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.step-card-body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.step-card-body h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #2b1f3d;
+    font-size: 1.1rem !important;
+}
+
+.step-card-body p {
+    font-family: 'Lora', serif;
+    font-size: 1em !important;
+    color: #555;
+    line-height: 1.45;
+}
+
+/* Gold Bullet Lists (Matching Screenshot) */
+.gold-bullet-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.gold-bullet-list li {
+    position: relative;
+    padding-left: 1.75rem;
+    margin-bottom: 1.2rem;
+    font-family: 'Lora', serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.gold-bullet-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: -2px;
+    color: #D4AF37; /* Gold bullets */
+    font-size: 1.6rem;
+}
+
+.cs-divider {
+    border: none;
+    border-top: 1px solid #E5DCEB;
+    margin: 2.5rem 0;
+}
+
+/* Footer Previous/Next Links */
+.project-footer-nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    margin-top: 3rem;
+    border-top: 1px solid #E5DCEB;
+}
+
+.project-footer-nav .nav-link {
+    font-family: 'Lora', serif;
+    color: #D4AF37;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.project-footer-nav .nav-link:hover {
+    text-decoration: underline;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+.tool-badge {
+    background: var(--accent-color);
+    border: 1px solid var(--border-color);
+    padding: 2px 10px;
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    font-size: 0.85em;
+    color: #2A1744;
+    border-radius: 20px;
+}
+
+/* ------- Image Carousel Style Settings ---------- */
+.carousel-container {
+    position: relative;
+    max-width: 720px;
+    margin: 2rem auto;
+    background-color: #F2EBF4; /* Champagne/cream card background */
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.carousel-track-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    transition: transform 0.4s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel-image {
+    width: 100%;
+    height: auto;
+    max-height: 520px;
+    object-fit: contain;
+    background-color: #1a1829;
+    display: block;
+}
+
+.carousel-caption {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background-color: #F2EBF4;
+    text-align: center;
+    box-sizing: border-box;
+    border-top: 1px solid #E5DCEB;
+}
+
+.carousel-caption h4 {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #2b1f3d;
+    font-size: 1.1rem !important;
+    margin-bottom: 0.25rem;
+}
+
+.carousel-caption p {
+    font-family: 'Lora', serif;
+    color: #555555;
+    font-size: 0.9rem !important;
+    margin: 0;
+}
+
+/* Nav Buttons (Left/Right Arrows) */
+.carousel-button {
+    position: absolute;
+    top: 42%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid #D4AF37;
+    color: #2b1f3d;
+    font-size: 1.25rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.carousel-button:hover {
+    background-color: #D4AF37;
+    color: #ffffff;
+}
+
+.carousel-button-left {
+    left: 12px;
+}
+
+.carousel-button-right {
+    right: 12px;
+}
+
+/* Bottom Pagination Dots */
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 0 1rem;
+    background-color: #F2EBF4;
+}
+
+.carousel-indicator {
+    border: 1px solid #D4AF37;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.carousel-indicator.current-slide {
+    background-color: #D4AF37; /* Metallic Gold filled state */
+    transform: scale(1.2);
+}
+
+/* --------------------------  Image Lightbox Modal Style Settings --------------------- */
+
+/* Cursor hint for process images */
+.process-step-card img,
+.overview-image img {
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    object-fit: contain;
+}
+
+.process-step-card img:hover,
+.overview-image img:hover {
+    opacity: 0.9;
+}
+
+/* Visible focus ring when tabbing to a process image or the lightbox close button */
+.process-step-card img:focus-visible,
+.lightbox-close:focus-visible,
+.lightbox-btn:focus-visible {
+    outline: 2px solid #D4AF37;
+    outline-offset: 3px;
+}
+
+.overview-image video {
+    width: 100%;
+    align-items: center;
+}
+
+/* Modal Overlay Container */
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 16, 26, 0.92);
+    backdrop-filter: blur(5px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.lightbox-modal.active {
+    display: flex;
+}
+
+.lightbox-carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 90vw;
+    max-height: 75vh;
+}
+
+.lightbox-content {
+    max-width: 80vw;
+    max-height: 75vh;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+/* Lightbox Navigation Arrows */
+.lightbox-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid #D4AF37;
+    color: #ffffff;
+    font-size: 1.5rem;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1010;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.lightbox-btn:hover {
+    background-color: #D4AF37;
+    color: #1a1829;
+}
+
+.lightbox-prev {
+    left: -60px;
+}
+
+.lightbox-next {
+    right: -60px;
+}
+
+/* Close Button */
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fdfcf8;
+    font-size: 42px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    z-index: 1020;
+    background: none; /* now a <button>, so remove default button styling */
+    border: none;
+    line-height: 1;
+}
+
+.lightbox-close:hover {
+    color: #D4AF37;
+}
+
+/* Caption and Counter */
+#lightbox-caption {
+    margin-top: 1rem;
+    color: #E5DCEB;
+    font-family: 'Lora', serif;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+#lightbox-counter {
+    margin-top: 0.3rem;
+    color: #D4AF37;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+/* Hide arrows if there is only 1 image in the gallery */
+.single-image-mode .lightbox-btn {
+    display: none !important;
+}
+
+/* --------------------------- Resume Page Style Settings ------------------------- */
+.resume-page .hero-section {
+    height: 350px;
+}
+
+/* ----------------- Resume Style Settings ------------------------ */
+.resume-viewer-section {
+    padding: 80px 10%;
+    background-color: #FAF8FC;
+}
+
+.resume-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    border: 1px solid rgba(112, 41, 99, 0.15);
+    box-shadow: 0 8px 24px rgba(42, 23, 68, 0.08);
+    overflow: hidden;
+}
+
+.resume-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background-color: #F2EBF4;
+    border-bottom: 1px solid rgba(112, 41, 99, 0.15);
+}
+
+.viewer-title {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--headingText-color);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.viewer-title i {
+    color: var(--primary-color);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.action-btn {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 3px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+}
+
+.primary-btn {
+    background-color: var(--accent-color);
+    color: var(--headingText-color);
+    border: 1px solid var(--border-color);
+}
+
+.about-btn:hover, .card-btn:hover, .case-btns a:hover, .primary-btn:hover {
+    background-color: #c7a021 !important;
+}
+
+.about-btn:visited, .card-btn:visited, .case-btns a:visited, .primary-btn:visited {
+    background-color: var(--accent-color);
+    color: var(--headingText-color);
+    border: 1px solid var(--border-color);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: var(--headingText-color);
+    border: 1px solid rgba(42, 23, 68, 0.25);
+}
+
+.secondary-btn:hover {
+    background-color: rgba(42, 23, 68, 0.05);
+}
+
+.pdf-wrapper {
+    width: 100%;
+    height: 900px;
+    background-color: #525659; /* Standard PDF viewer backdrop */
+}
+
+.pdf-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .resume-actions {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+    
+    .pdf-wrapper {
+        height: 600px;
+    }
+}
+
+/* --------------------- Card Grid Responsiveness ---------------------------- */
+/* Half-screen / tablet: 2 cards per row */
+@media (max-width: 1024px) {
+    .featured-card,
+    .portfolio-page .featured-grid .featured-card {
+        width: calc((100% - 30px) / 2); /* 2 cards + one 30px gap */
+        min-width: 0;
+    }
+
+    .mini-experiments .featured-grid .featured-card {
+        width: calc((100% - 2rem) / 2); /* 2 cards + one 2rem gap */
+        min-width: 0;
+    }
+
+    .process-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Phone: 1 card per row */
+@media (max-width: 600px) {
+    .featured-card,
+    .portfolio-page .featured-grid .featured-card,
+    .mini-experiments .featured-grid .featured-card {
+        width: 100%;
+    }
+
+    .process-card-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --------------------- Mini Experiments: Match Card Sizes ---------------------------- */
+/* Half-screen + mobile: same side padding and gap as the main featured section,
+   so the mini experiment cards come out the same width as every other card */
+@media (max-width: 1024px) {
+    .featured-section.mini-experiments {
+        padding: 60px 10%;
+    }
+
+    .mini-experiments .featured-grid {
+        gap: 30px;
+    }
+
+    .mini-experiments .featured-grid .featured-card {
+        width: calc((100% - 30px) / 2);
+    }
+}
+
+@media (max-width: 600px) {
+    .mini-experiments .featured-grid .featured-card {
+        width: 100%;
+    }
+}
+
+/* --------------------- Case Study Buttons: Stack on Mobile ---------------------------- */
+@media (max-width: 600px) {
+    .case-btns {
+        flex-direction: column;
+        padding-left: 0;
+        gap: 0.75rem;
+    }
+
+    .case-btns a:link,
+    .case-btns a:visited {
+        width: 100%;
+    }
+}
+
+/* --------------------- Tool Badges: Clean Wrapping ---------------------------- */
+@media (max-width: 1024px) {
+    .meta-info p:has(.tool-badge) {
+        padding-left: 3.4em; /* space reserved for the "Tools:" label */
+        line-height: 2.1; /* vertical gap between rows of badges */
+    }
+
+    /* Pull the label back into that reserved space, so wrapped badges line up under the first badge instead of under "Tools:" */
+    .meta-info p:has(.tool-badge) b {
+        display: inline-block;
+        width: 3.4em;
+        margin-left: -3.4em;
+    }
+
+    .tool-badge {
+        display: inline-block;
+        white-space: nowrap; /* never split a badge across two lines */
+        line-height: 1.4;
+    }
+}
+
+/* --------------------- Hamburger Navigation ---------------------------- */
+/* Button is hidden on desktop */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background-color: var(--solidBgText-color);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+.nav-toggle:focus-visible {
+    outline: 2px solid #ffdf80;
+    outline-offset: 2px;
+}
+
+/* Half-screen + mobile: show hamburger, turn links into a dropdown */
+@media (max-width: 1024px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    nav .right-side {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 30px 24px;
+        background: var(--primary-color);
+        border-bottom: 1px solid #4a1c42;
+        box-shadow: 0 8px 16px rgba(30, 19, 43, 0.2);
+
+        /* Hidden until opened */
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-8px);
+        transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+    }
+
+    nav.nav-open .right-side {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    /* Hamburger turns into an X when open */
+    nav.nav-open .nav-toggle span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    nav.nav-open .nav-toggle span:nth-child(2) {
+        opacity: 0;
+    }
+
+    nav.nav-open .nav-toggle span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+}
+
+@media (max-width: 600px) {
+    nav .right-side {
+        padding: 16px 15px 20px;
+    }
+}
+
+/* --------------------- Case Study Tabs: Horizontal Bar ---------------------------- */
+/* Half-screen + mobile: the left sidebar becomes a sticky, swipeable bar above the content */
+@media (max-width: 1024px) {
+    .case-study-wrapper {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 1.5rem;
+        padding: 0 2rem 2rem;
+    }
+
+    /* The whole bar sticks to the top of the screen, full width */
+    .case-study-page .vertical-tabs {
+        position: sticky !important;
+        top: 0;
+        z-index: 9; /* stays under the hamburger dropdown (z-index 10) */
+        width: calc(100% + 4rem) !important;
+        min-width: 0 !important;
+        margin-left: -2rem;
+        padding: 0 2rem;
+        background-color: #FAF8FC !important;
+    }
+
+    .case-study-page .sticky-tab-nav {
+        position: static !important; /* the aside does the sticking now */
+    }
+
+    .case-study-page .sticky-tab-nav ul {
+        flex-direction: row !important;
+        gap: 0.25rem !important;
+        border-left: none !important;
+        box-shadow: inset 0 -2px 0 #E5DCEB; /* baseline under the tabs */
+        overflow-x: auto;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .case-study-page .sticky-tab-nav ul::-webkit-scrollbar {
+        display: none;
+    }
+
+    .case-study-page .sticky-tab-nav ul.has-more {
+        -webkit-mask-image: linear-gradient(to right, #000 85%, transparent);
+        mask-image: linear-gradient(to right, #000 85%, transparent);
+    }
+
+    .case-study-page .sticky-tab-nav ul li {
+        width: auto !important;
+        flex-shrink: 0;
+        margin-bottom: 0 !important;
+    }
+
+    .case-study-page .sticky-tab-nav ul li a {
+        padding: 0.85rem 0.9rem !important;
+        font-size: 1rem;
+        border-bottom: 3px solid transparent;
+    }
+
+    /* Gold underline replaces the gold left border */
+    .case-study-page .sticky-tab-nav ul li a.active {
+        border-left: none !important;
+        margin-left: 0 !important;
+        border-bottom: 3px solid #D4AF37 !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .case-study-wrapper {
+        padding: 0 1rem 1.5rem;
+    }
+
+    .case-study-page .vertical-tabs {
+        width: calc(100% + 2rem) !important;
+        margin-left: -1rem;
+        padding: 0 1rem;
+    }
+}

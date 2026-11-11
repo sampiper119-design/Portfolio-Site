@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" href="data:,">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Bay City High School Website Case Study - Samantha Piper</title>
+
+		<!-- Font Awesome Icons (v.6.4.0)-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+		<!-- Google Fonts Preconnect-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+		<!-- Google Fonts-->
+		<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Caveat:wght@400..700&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+		<!-- Local CSS stylesheet-->
+		<link rel="stylesheet" href="css/style.css">
+
+	</head>
+    <body class="case-study-page">
+        <!-- Nav Bar Section Starts-->
+		 <nav>
+			<div class="left-side">
+				<img src="images/my brandmark b&w 2.png" class="logo" height="30" alt="">
+				<h1>Samantha Piper</h1>
+			</div>
+
+            <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+
+			<div class="right-side" id="nav-menu">
+				<div class="nav-links">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="portfolio.html" class="active">Portfolio</a></li>
+						<li><a href="resume.html">Resume</a></li>
+					</ul>
+				</div>
+
+				<div class="social-icons">
+					<a href="https://www.linkedin.com/in/samantha-piper-33660840b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+					<a href="mailto:sampiper119@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email"><i class="far fa-envelope-open"></i></a>
+				</div>
+			</div>
+		 </nav>
+		<!-- Nav Bar Section Ends-->
+
+        <!-- Main Section -->
+        <div class="project-header case-study-header">
+            <h2>Bay City High School Website - Design Case Study</h2>
+            <h3>Web Development, Frontend</h3>
+        </div>
+
+        <!-- Case Study Layout Wrapper -->
+        <div class="case-study-wrapper">
+            
+            <!-- Left Vertical Tab Navigation -->
+            <aside class="vertical-tabs">
+                <nav class="sticky-tab-nav">
+                    <ul>
+                        <li><a href="#overview" class="active">Overview</a></li>
+                        <li><a href="#process">Process & Iterations</a></li>
+                        <li><a href="#challenges">The Challenges</a></li>
+                        <li><a href="#features">Key Features</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Main Content Body -->
+            <main class="case-study-content">
+                
+                <!-- Overview Section -->
+                <section id="overview" class="cs-section project-overview">
+                    <div class="overview-image">
+                        <video width="640" height="360" controls> <source src="media/BCHS.mp4" type="video/mp4" alt="Bay City High School video walkthrough"> Your browser does not support the video tag.</video>
+                    </div><br>
+
+                    <!-- GitHub Live Demo Link -->
+                     <p class="demo"><b>Visit the Live GitHub Demo:</b> <a class="git-link" target="_blank" href="https://sampiper119-design.github.io/bay-city-high-site/">Bay City High School Website</a></p>
+                     
+                    <div class="overview-details">
+                        <p><b>Context:</b> An ambitious multi-page web application designed for a fictional 
+                            school, the Bay City High School. This project focuses on creating a seamless, 
+                            simulated user experience tailored to four distinct audiences: students, parents, alumni, and 
+                            faculty. Managing a platform of this scale required deep focus on information architecture, content 
+                            structuring, and navigation routing before and during development. To organize the vast amount of 
+                            content, tabbed layouts across all major secondary pages alongside dynamic 
+                            client-side features, such as simulated event RSVP forms with guest input logic, an interactive 
+                            weekly cafeteria menu toggle, image carousels, and custom profile modals were implemented. 
+                            Furthermore, the project establishes a cohesive brand identity and governance framework complete
+                            with a unified colour palette, fictional concept banners, student dress code guidelines, and detailed 
+                            legal disclaimers.</p>
+                        
+                        <p><b>Goal:</b> To create a multi-page web application for a fictional school that features simulated, 
+                            interactive elements and content that realistically translates the brand identity and reputation of 
+                            a concept high school community for four distinct audiences: students, parents, alumni, 
+                            and faculty.</p>
+
+                        <div class="meta-info">
+                            <p><b>Timeline:</b> June - Aug 2025</p>
+                            <p><b>Tools:</b> <span class="tool-badge">Notepad++</span> <span class="tool-badge">Visual Studio Code</span></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Process Section (Styled like Screenshot) -->
+                <section id="process" class="cs-section process-section">
+                    <h2>Process & Iterations:</h2>
+                    <p class="section-intro">This project did not take on any real, formal concept planning beforehand. I simply 
+                        had an idea, looked at inspiration, and dove headfirst into code. Additionally, ChatGPT was utilized to 
+                        handle mass content generation, in order to focus more on building the layout, tabs, and interactive 
+                        client-side tools.</p>
+
+                    <div class="process-card-grid">
+                    <!-- Step 1 Card (Single preview image, opens 4-sketch carousel in lightbox) -->
+                    <div class="process-step-card">
+                        <div class="step-image-box">
+                            <img src="images/bch.png" alt="Bay City High home page hero banner" 
+                                data-step="1" data-index="0"
+                                data-gallery='["images/bch.png"]'>
+                        </div>
+                        <div class="step-card-body">
+                            <h3>Step 1</h3>
+                            <p>Started the project with a broad vision to build a comprehensive school system, researching 
+                                inspiration and mapping out the various audiences (students, parents, alumni, and faculty) before 
+                                diving headfirst into the build.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 Card (Single preview image, opens 2-iteration carousel in lightbox) -->
+                    <div class="process-step-card">
+                        <div class="step-image-box">
+                            <img src="images/tabs.png" alt="Vertical tab menu for About page" 
+                                data-step="2" data-index="0"
+                                data-gallery='["images/tabs.png"]'>
+                        </div>
+                        <div class="step-card-body">
+                            <h3>Step 2</h3>
+                            <p>Built the expansive multi-page application by implementing tab menu layouts, routing systems, and 
+                                navigation flows across all major sections so that every audience can find the content they 
+                                require instantly without getting lost in another's.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 Card (Single image final poster) -->
+                    <div class="process-step-card">
+                        <div class="step-image-box">
+                            <img src="images/rsvp.png" alt="Alumni event RSVP form" 
+                                data-step="3" data-index="0"
+                                data-gallery='["images/rsvp.png"]'>
+                        </div>
+                        <div class="step-card-body">
+                            <h3>Step 3</h3>
+                            <p>Developed dynamic client-side features&ndash; including simulated event RSVP forms, weekly 
+                                cafeteria menu toggles, and profile modals. Then, consulted AI to assist in handling mass data 
+                                entry.</p>
+                        </div>
+                    </div>
+                </div>
+                </section>
+
+                <hr class="cs-divider">
+
+                <!-- Challenges Section -->
+                <section id="challenges" class="cs-section challenges-section">
+                    <h2>The Challenges:</h2>
+                    <ul class="gold-bullet-list">
+                        <li><b>Multi-Audience Information Hierarchy:</b> Designing a unified web model that simultaneously 
+                            serves four distinct audiences without cluttering navigation or burying critical information.</li>
+                        <li><b>Managing Large-Scale Information Architecture:</b> Organizing an extensive volume of content 
+                            across multiple pages, requiring secondary routing, tab menu layouts, and section hierarchy.</li>
+                        <li><b>Mass-Content Management:</b> Balancing the need for rich, realistic data with code and layout 
+                            development.</li>
+                    </ul>
+                </section>
+
+                <hr class="cs-divider">
+
+                <!-- Key Features Section -->
+                <section id="features" class="cs-section features-section">
+                    <h2>Key Features & Highlights:</h2>
+                    <ul class="gold-bullet-list">
+                        <li><b>Multi-Audience Hubs & Tab Menu Routing:</b> Features clear, segmented page structures and a tab 
+                            menu layout to streamline navigation for students, parents, alumni, and faculty.</li>
+                        <li><b>Interactive Cafeteria Menu Toggle:</b> Built a dynamic client-side tool allowing users to switch 
+                            between weekly meal plans seamlessly.</li>
+                        <li><b>Simulated Event RSVP System:</b> Programmed custom event registration forms, complete with guest 
+                            input logic.</li>
+                        <li><b>Cohesive School Brand Identity:</b> Established custom brand guidelines, including a set colour 
+                            scheme, fictional concept banners, student dress code rules, and formal disclaimers.</li>
+                        <li><b>AI Content Mass-Production:</b> Utilized ChatGPT to generate realistic, high-volume content for 
+                            school directories and athletic rosters, ensuring a realistically simulated scale of content, while maintaining focus on interactive UI components</li>
+                    </ul>
+                </section>
+
+                <!-- Project Navigation -->
+                <div class="project-footer-nav">
+                    <a href="Botanic_Bloom_Bistro.html" class="nav-link">&larr; Previous Project</a>
+                    <a href="Alphabet_Project.html" class="nav-link">Next Project &rarr;</a>
+                </div>
+
+            </main>
+        </div>
+
+        <!-- Footer Section Starts -->
+		 <footer>
+			<div class="footer-container">
+				<div class="footer-left">
+					<img src="images/my brandmark b&w 2.png" alt="Samantha Piper Logo" class="footer-logo" />
+
+					<div class="footer-info">
+						<h3>Feel Like Getting In Contact:</h3>
+						<p>Phone: (207) 660-8045 | Email: <a href="mailto:sampiper119@gmail.com">sampiper119@gmail.com</a></p>
+					</div>
+				</div>
+
+				<div class="footer-right">
+					<div class="social-icons">
+						<a href="https://www.linkedin.com/in/samantha-piper-33660840b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+						<a href="mailto:sampiper119@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email"><i class="far fa-envelope-open"></i></a>
+					</div>
+				</div>
+			</div>
+		 </footer>
+		<!-- Footer Section Ends -->
+
+        <!-- Lightbox Carousel Modal Overlay -->
+        <div id="image-lightbox" class="lightbox-modal">
+            <button class="lightbox-close" aria-label="Close Lightbox">&times;</button>
+            
+            <div class="lightbox-carousel-container">
+                <button class="lightbox-btn lightbox-prev" aria-label="Previous Image">&#10094;</button>
+                <div class="lightbox-slide-wrapper">
+                    <img class="lightbox-content" id="lightbox-img" alt="Enlarged process view">
+                </div>
+                <button class="lightbox-btn lightbox-next" aria-label="Next Image">&#10095;</button>
+            </div>
+
+            <div id="lightbox-caption"></div>
+            <div id="lightbox-counter">1 / 4</div>
+        </div>
+
+        <!-- Vertical Tab and LightBox Model JavaScript -->
+        <script src="case-study.js"></script>
+
+        <!-- Hamburger menu toggle -->
+		<script src="nav.js"></script>
+    </body>
+</html>

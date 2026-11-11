@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" href="data:,">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>WordBlocks Game Case Study - Samantha Piper</title>
+
+		<!-- Font Awesome Icons (v.6.4.0)-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+		<!-- Google Fonts Preconnect-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+		<!-- Google Fonts-->
+		<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Caveat:wght@400..700&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+		<!-- Local CSS stylesheet-->
+		<link rel="stylesheet" href="css/style.css">
+
+	</head>
+    <body class="case-study-page">
+        <!-- Nav Bar Section Starts-->
+		 <nav>
+			<div class="left-side">
+				<img src="images/my brandmark b&w 2.png" class="logo" height="30" alt="">
+				<h1>Samantha Piper</h1>
+			</div>
+
+            <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+
+			<div class="right-side" id="nav-menu">
+				<div class="nav-links">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="portfolio.html" class="active">Portfolio</a></li>
+						<li><a href="resume.html">Resume</a></li>
+					</ul>
+				</div>
+
+				<div class="social-icons">
+					<a href="https://www.linkedin.com/in/samantha-piper-33660840b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+					<a href="mailto:sampiper119@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email"><i class="far fa-envelope-open"></i></a>
+				</div>
+			</div>
+		 </nav>
+		<!-- Nav Bar Section Ends-->
+
+        <!-- Main Section -->
+        <div class="project-header case-study-header">
+            <h2>WordBlocks Game - Design Case Study</h2>
+            <h3>Interactive & Creative Coding</h3>
+        </div>
+
+        <!-- Case Study Layout Wrapper -->
+        <div class="case-study-wrapper">
+            
+            <!-- Left Vertical Tab Navigation -->
+            <aside class="vertical-tabs">
+                <nav class="sticky-tab-nav">
+                    <ul>
+                        <li><a href="#overview" class="active">Overview</a></li>
+                        <li><a href="#process">Process & Iterations</a></li>
+                        <li><a href="#challenges">The Challenges</a></li>
+                        <li><a href="#features">Key Features</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Main Content Body -->
+            <main class="case-study-content">
+                
+                <!-- Overview Section -->
+                <section id="overview" class="cs-section project-overview">
+                    <div class="overview-image">
+                        <video width="640" height="360" autoplay controls> <source src="media/WordBlocks Vid.mp4" type="video/mp4" alt="WordBlocks Game video demo"> Your browser does not support the video tag.</video>
+                    </div><br>
+
+                    <!-- GitHub Live Demo Link -->
+                     <p class="demo"><b>View Live GitHub Demo:</b> <a class="git-link" target="_blank" href="https://sampiper119-design.github.io/Word-Game/">WordBlocks Game</a></p>
+
+                    <div class="overview-details">
+                        <p><b>Context:</b> Combining the fluid sliding mechanics of 2048 with the strategic word-building gameplay of Scrabble, WordBlocks is a 
+                            web-based arcade puzzle game built using HTML, CSS, and vanilla JavaScript. Developed to explore custom game loop logic 
+                            and interactive canvas mechanics, the game calls for players to shift letter tiles across a 6x6 grid using keyboard directional controls 
+                            or mobile touch swipes to form words before the board is full. The core gameplay is enhanced by special tile mechanics— such as 
+                            wildcards (that simulate the blank tiles in Scrabble) and double-letter blocks— alongside a multi-layered scoring engine that rewards word 
+                            length, rare letters (Q, Z, X), "Hot Zone" line clears, and intersecting word cross-multipliers. To give players a final chance before the 
+                            grid fills up, WordBlocks contains a targeted 2x2 Bomb power-up that clears the grid of any letters. When no moves remain, an automated 
+                            endgame sweep algorithm thoroughly evaluates rows, columns, and diagonals to score any remaining valid words.</p>
+                        
+                        <p><b>Goal:</b> To create a dynamic, interactive gaming experience by combining the sliding mechanics of 2048 with the strategic word-building 
+                            gameplay of Scrabble, adding custom rules and mechanics to build a unique digital experience.</p>
+
+                        <div class="meta-info">
+                            <p><b>Timeline:</b> Aug - Sept 2026</p>
+                            <p><b>Tools:</b> <span class="tool-badge">Visual Studio Code</span> <span class="tool-badge">HTML5</span> <span class="tool-badge">CSS3</span> <span class="tool-badge">JavaScript</span></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Process Section (Styled like Screenshot) -->
+                <section id="process" class="cs-section process-section">
+                    <h2>Process & Iterations:</h2>
+                    <p class="section-intro">Along with originally consulting Claude AI to aid with initial concept planning and gameplay rule structuring, it was 
+                        also utilized to kickstart the engineering phase as an architectural sounding board for early data structures and debugging complex 
+                        array-shifting edge cases. From there, the core gameplay loops, scoring multipliers, and UI integrations were manually written, tested, 
+                        and refined.</p>
+
+                    <div class="process-card-grid">
+                    <!-- Step 1 Card (Single preview image, opens 4-sketch carousel in lightbox) -->
+                    <div class="process-step-card">
+                        <div class="step-image-box">
+                            <img src="images/grid.png" alt="WordBlocks 6x6 grid" 
+                                data-step="1" data-index="0"
+                                data-gallery='["images/grid.png"]'>
+                        </div>
+                        <div class="step-card-body">
+                            <h3>Step 1</h3>
+                            <p>Built the foundational 6x6 board, programmed directional input controls (arrow keys, WASD, and mobile touch swipes), and translated 2048 
+                                sliding mechanics to shift letter tiles seamlessly across the canvas before the board fills up</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 Card (Single preview image, opens 2-iteration carousel in lightbox) -->
+                    <div class="process-step-card">
+                        <div class="step-image-box">
+                            <img src="media/wordblocks 1.gif" alt="WordBlocks word validation loop" 
+                                data-step="2" data-index="0"
+                                data-gallery='["media/wordblocks 1.gif"]'>
+                        </div>
+                        <div class="step-card-body">
+                            <h3>Step 2</h3>
+                            <p>Developed the primary gameplay validation loop, checking connected letter combinations against valid dictionary words. Also developed an 
+                                intricate scoring system that factors in word length, rare-letter multipliers (Q, Z, X), dynamic "Hot Zone" line clears, and 
+                                intersecting cross multipliers.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 Card (Single image final poster) -->
+                    <div class="process-step-card">
+                        <div class="step-image-box">
+                            <img src="media/wordblocks 2.gif" alt="WordBlocks intersecting word cross multiplier" 
+                                data-step="3" data-index="0"
+                                data-gallery='["media/wordblocks 2.gif"]'>
+                        </div>
+                        <div class="step-card-body">
+                            <h3>Step 3</h3>
+                            <p>Introduced more strategic play by implementing Scrabble-inspired wildcards (?) and double-letter blocks (EE, OO, TT). Also added a 
+                                targeted 2x2 Bomb power-up for crowded grids, and programmed an automated endgame sweep algorithm to scan rows, columns, and diagonals 
+                                to score remaining words when no moves remain.</p>
+                        </div>
+                    </div>
+                </div>
+                </section>
+
+                <hr class="cs-divider">
+
+                <!-- Challenges Section -->
+                <section id="challenges" class="cs-section challenges-section">
+                    <h2>The Challenges:</h2>
+                    <ul class="gold-bullet-list">
+                        <li><b>Translating 2048 Sliding Mechanics to Letter Tiles:</b> Adapting the directional tile-sliding mechanics of 2048 so that it seamlessly handles letter tiles, wildcard tiles, and grid capacity limits without breaking responsive web performance</li>
+                        <li><b>Complex Multi-Tiered Scoring Logic:</b> Developing and programming a complex scoring matrix that concurrently calculates word length, rare-letter bonuses, "Hot Zone" line clears, and intersecting cross-multipliers.</li>
+                        <li><b>Automated Endgame State Sweep:</b> Programming an automated sweep algorithm capable of scanning rows, columns, and diagonals to evaluate and score remaining valid words the moment no moves remain on the board.</li>
+                    </ul>
+                </section>
+
+                <hr class="cs-divider">
+
+                <!-- Key Features Section -->
+                <section id="features" class="cs-section features-section">
+                    <h2>Key Features & Highlights:</h2>
+                    <ul class="gold-bullet-list">
+                        <li><b>Hybrid Gameplay Mechanic:</b> Uniquely merges the sliding tile mechanics of 2048 with the strategic word-building of Scrabble</li>
+                        <li><b>Custom Scrabble-Inspired Special Tiles:</b> Features versatile wildcard tiles where players pick target letters, and double-letter tiles to increase scoring.</li>
+                        <li><b>Interactive Controls & Responsive Canvas:</b> Created input controls for both desktop and mobile via arrow keys, WASD, and touch-swipe gestures.</li>
+                        <li><b>2x2 Bomb Power-Up:</b> Provides players with a second chance during a crowded board, allowing users to target a 2x2 area to clear.</li>
+                        <li><b>Automated Endgame Sweep:</b> Features an automatic post-game scanning algorithm that sweeps through rows, columns, and diagonals to catch and score remaining words when the board fills up.</li>
+                    </ul>
+                </section>
+
+                <!-- Project Navigation -->
+                <div class="project-footer-nav">
+                    <a href="StudyScape.html" class="nav-link">&larr; Previous Project</a>
+                    <a href="WordBlocks_3D.html" class="nav-link">Next Project &rarr;</a>
+                </div>
+
+            </main>
+        </div>
+
+        <!-- Footer Section Starts -->
+		 <footer>
+			<div class="footer-container">
+				<div class="footer-left">
+					<img src="images/my brandmark b&w 2.png" alt="Samantha Piper Logo" class="footer-logo" />
+
+					<div class="footer-info">
+						<h3>Feel Like Getting In Contact:</h3>
+						<p>Phone: (207) 660-8045 | Email: <a href="mailto:sampiper119@gmail.com">sampiper119@gmail.com</a></p>
+					</div>
+				</div>
+
+				<div class="footer-right">
+					<div class="social-icons">
+						<a href="https://www.linkedin.com/in/samantha-piper-33660840b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+						<a href="mailto:sampiper119@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email"><i class="far fa-envelope-open"></i></a>
+					</div>
+				</div>
+			</div>
+		 </footer>
+		<!-- Footer Section Ends -->
+
+        <!-- Lightbox Carousel Modal Overlay -->
+        <div id="image-lightbox" class="lightbox-modal">
+            <button class="lightbox-close" aria-label="Close Lightbox">&times;</button>
+            
+            <div class="lightbox-carousel-container">
+                <button class="lightbox-btn lightbox-prev" aria-label="Previous Image">&#10094;</button>
+                <div class="lightbox-slide-wrapper">
+                    <img class="lightbox-content" id="lightbox-img" alt="Enlarged process view">
+                </div>
+                <button class="lightbox-btn lightbox-next" aria-label="Next Image">&#10095;</button>
+            </div>
+
+            <div id="lightbox-caption"></div>
+            <div id="lightbox-counter">1 / 4</div>
+        </div>
+
+        <!-- Vertical Tab and LightBox Model JavaScript -->
+        <script src="case-study.js"></script>
+
+        <!-- Hamburger menu toggle -->
+		<script src="nav.js"></script>
+    </body>
+</html>

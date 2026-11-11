@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<link rel="icon" href="data:,">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Samantha Piper - Selected Work</title>
+
+	<!-- Font Awesome Icons (v.6.4.0)-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+	<!-- Google Fonts Preconnect-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<!-- Google Fonts-->
+	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Caveat:wght@400..700&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+	<!-- Local CSS stylesheet-->
+	<link rel="stylesheet" href="css/style.css">
+
+	<script type="text/javascript" src="p5/p5.min.js"></script>
+	<script type="text/javascript" src="portfolio-sketch.js"></script>
+</head>
+<body class="portfolio-page">
+    <!-- Nav Bar Section Starts-->
+	 <nav>
+		<div class="left-side">
+			<img src="images/my brandmark b&w 2.png" class="logo" height="30" alt="">
+			<h1>Samantha Piper</h1>
+		</div>
+
+		<button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+
+		<div class="right-side" id="nav-menu">
+			<div class="nav-links">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="portfolio.html" class="active">Portfolio</a></li>
+					<li><a href="resume.html">Resume</a></li>
+				</ul>
+			</div>
+
+			<div class="social-icons">
+				<a href="https://www.linkedin.com/in/samantha-piper-33660840b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+				<a href="mailto:sampiper119@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email"><i class="far fa-envelope-open"></i></a>
+			</div>
+		</div>
+	 </nav>
+	<!-- Nav Bar Section Ends-->
+
+    <!-- Hero Section Starts-->
+     <section class="hero-section">
+        <div id="hero-container"></div>
+        <div class="hero-content">
+            <h1>Selected Work</h1>
+            <h2>UI/UX Design Systems & Interactive Front-End Engineering</h2>
+            <p>An interactive architectural archive featuring client builds, design prototypes, and generative visual studies.</p>
+        </div>
+     </section>
+    <!-- Hero Section Ends-->
+
+	<!-- Featured Section Starts-->
+	 <section class="featured-section">
+		<!-- Inside section class="featured-section" -->
+		<div class="featured-container">				
+				<!-- FILTER BAR STARTS -->
+				<div class="filter-bar-container">
+					<span class="filter-label">Filter:</span>
+					<div class="filter-buttons">
+						<button class="filter-btn active" data-filter="all">All Projects</button>
+						<button class="filter-btn" data-filter="web">Web Development</button>
+						<button class="filter-btn" data-filter="interactive">Interactive & Creative Coding</button>
+						<button class="filter-btn" data-filter="design">Visual & Graphic Design</button>
+						<button class="filter-btn" data-filter="uiux">UI/UX & Product Design</button>
+						<button class="filter-reset-btn" id="filter-reset" title="Reset filter" aria-label="Reset filter">X</button>
+					</div>
+				</div>
+				<!-- FILTER BAR ENDS -->
+
+				<h2 class="section-title">Featured Projects</h2>
+
+				<div class="featured-grid">
+					<div class="featured-card">
+						<div class="card-image-wrapper">
+							<img src="images/botanic bistro.png" alt="Website Project Preview" class="card-image" />
+						</div>
+						<div class="card-body">
+							<div class="badges">
+								<span class="category-badge">Web Development</span>
+								<span class="category-badge">Brand Identity</span>
+							</div>
+						<h3 class="card-title">Botanic Bloom Bistro Website & Brand Identity System </h3>
+						<p class="card-description"> Designed and developed a complete brand identity system and front-end 
+							website for an original, conceptual restaurant brand. This project bridges graphic design and 
+							interactive web development— combining custom brand collateral with a responsive, feature-rich web 
+							application.</p>
+						
+						<div class="tech-tags">
+							<span class="tag">HTML</span>
+							<span class="tag">CSS</span>
+							<span class="tag">JavaScript</span>
+							<span class="tag">Illustrator</span>
+						</div>
+
+						<a href="Botanic_Bloom_Bistro.html" class="card-btn">View Case Study</a>
+						</div>
+					</div>
+
+					<div class="featured-card">
+						<div class="card-image-wrapper">
+							<img src="images/wordblocks.png" alt="Game Project Preview" class="card-image" />
+						</div>
+						<div class="card-body">
+						<span class="category-badge">Interactive & Creative Coding</span>
+						<h3 class="card-title">WordBlocks Game</h3>
+						<p class="card-description">An interactive, web-based word puzzle game that combines the tile-sliding 
+							mechanics of 2048 with the word-building of Scrabble. The game challenges players to slide letter 
+							tiles across a 6x6 grid using keyboard or swipe controls to form words before the board fills up. It 
+							features custom scoring algorithms, wildcard tiles, grid-clearing power-ups, and an automated 
+							endgame sweep.</p>
+						
+						<div class="tech-tags">
+							<span class="tag">HTML</span>
+							<span class="tag">CSS</span>
+							<span class="tag">JavaScript</span>
+						</div>
+
+						<a href="WordBlocks.html" class="card-btn">View Case Study</a>
+						</div>
+					</div>
+
+					<div class="featured-card">
+						<div class="card-image-wrapper">
+							<img src="images/alphabet.png" alt="Graphic Design Project Preview" class="card-image" />
+						</div>
+						<div class="card-body">
+						<span class="category-badge">Visual & Graphic Design</span>
+						<h3 class="card-title">Alphabet Project</h3>
+						<p class="card-description">A typographic and visual design study inspired by Pentagram’s Osh Gallery 
+							Alphabet. Guided by Gestalt principles, this project explores the boundaries between legibility and 
+							abstraction— deconstructing all 26 letterforms into an evolving narrative story. Early letters begin 
+							as minimalist, geometric foundations, and progressively escalate into more intricate, motif-driven 
+							visual identities.</p>
+						
+						<div class="tech-tags">
+							<span class="tag">Adobe Illustrator</span>
+						</div>
+
+						<a href="Alphabet_Project.html" class="card-btn">View Case Study</a>
+						</div>
+					</div>
+
+				<div class="featured-card">
+					<div class="card-image-wrapper">
+					    <img src="images/bch.png" alt="Website Project Preview" class="card-image" />
+					</div>
+					<div class="card-body">
+                        <span class="category-badge">Web Development</span>
+                        <h3 class="card-title">Bay City High School</h3>
+                        <p class="card-description">A comprehensive, multi-page web application designed for a fictional high 
+							school, serving students, parents, alumni, and faculty. Built with a focus on information 
+							architecture and navigation flow, the project features tabbed content routing, interactive 
+							client-side tools— including event RSVP forms with guest logic and a weekly cafeteria menu 
+							toggle— alongside custom profile modals and a unified brand identity system.</p>
+					
+                        <div class="tech-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+
+                        <a href="Bay_City_High.html" class="card-btn">View Case Study</a>
+					</div>
+				</div>
+
+				<div class="featured-card">
+					<div class="card-image-wrapper placeholder-wrapper">
+					    <img src="images/wordblocks 3d.png" alt="Game Project Preview" class="card-image" />
+					</div>
+					<div class="card-body">
+                        <span class="category-badge">Interactive & Creative Coding</span>
+                        <h3 class="card-title">WordBlocks Twist - 3D Game</h3>
+                        <p class="card-description">An experimental 3D version of the original word puzzle game, introducing Rubik’s 
+							Cube-inspired slice rotations. This version of the game allows players to twist horizontal and vertical slices, rotate the board , and form 
+							cross-face word combinations. Features slice-freezing power-ups, board reshuffling, and custom 3D matrix math prototyped alongside 
+							AI tools.</p>
+                        
+                        <div class="tech-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+
+                        <a href="WordBlocks_3D.html" class="card-btn">View Case Study</a>
+					</div>
+				</div>
+
+				<div class="featured-card">
+					<div class="card-image-wrapper placeholder-wrapper">
+					    <img src="images/studyscape.png" alt="Interactive App Project Preview" class="card-image" />
+					</div>
+					<div class="card-body">
+                        <span class="category-badge">Interactive & Creative Coding</span>
+                        <h3 class="card-title">StudyScape: Ambient Pomodoro-Style Program</h3>
+                        <p class="card-description">An interactive, ambient, pomodoro-style study timer application designed to mix productivity with relaxing visuals.
+							The app features a class model and off-screen canvas buffers for high-performing graphics. It also includes particle physics for 
+							different weather states and a finite state machine that handles live timer logic and DOM control synchronization.</p>
+                        
+                        <div class="tech-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">p5.js</span>
+                        </div>
+
+                        <a href="StudyScape.html" class="card-btn">View Case Study</a>
+					</div>
+				</div>
+
+				<div class="featured-card">
+					<div class="card-image-wrapper">
+						<img src="images/stars-align.png" alt="Graphic Design Project Preview" class="card-image" />
+					</div>
+					<div class="card-body">
+						<div class="badges">
+							<span class="category-badge">Visual & Graphic Design</span> 
+							<span class="category-badge">Brand Identity</span>
+						</div>
+
+						<h3 class="card-title">Stars Align Tour Campaign</h3>
+						<p class="card-description">A comprehensive promotional toolkit and visual identity system created for an 
+							original, fictional band world tour. Built around cross-media guidelines, the project features both 
+							symmetrical and asymmetrical tour posters, an adapted three-slide mobile social media carousel, and a 
+							physical concert ticket that maintain strict visual consistency and information hierarchy.</p>
+						
+						<div class="tech-tags">
+							<span class="tag">Adobe Illustrator</span>
+						</div>
+
+					<a href="Stars_Align.html" class="card-btn">View Case Study</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	 </section>
+	<!-- Featured Section Ends-->
+
+	<!-- Mini Experiment Section Starts-->
+	 <section class="featured-section mini-experiments">
+		<div class="featured-container">
+			<h2 class="section-title">Mini Experiments</h2>
+
+			<div class="featured-grid">
+				<div class="featured-card">
+					<div class="card-image-wrapper">
+					    <img src="images/oscillator.png" alt="p5.Sound Project Preview" class="card-image" />
+					</div>
+					<div class="card-body">
+                        <span class="category-badge">Interactive & Creative Coding</span>
+                        <h3 class="card-title">Oscillator Playground: p5.Sound Experiment</h3>
+                        <p class="card-description">An interactive web-audio experiment built in p5.js exploring sound and tactile UI feedback. It features a 
+							modular structure, supporting switching between custom-drawn Piano, Guitar, and Drum visual interfaces with dual keyboard/click controls 
+							and responsive visual animations.</p>
+					
+                        <div class="tech-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">p5.js</span>
+							<span class="tag">p5.sound</span>
+                        </div>
+
+                        <a href="https://sampiper119-design.github.io/Sound-Project/" target="_blank" class="card-btn">Launch Experiment</a>
+					</div>
+				</div>
+
+				<div class="featured-card">
+					<div class="card-image-wrapper placeholder-wrapper">
+					    <img src="images/music app.png" alt="p5.Sound Project Preview" class="card-image" />
+					</div>
+					<div class="card-body">
+                        <span class="category-badge">UI/UX & Product Design</span>
+                        <h3 class="card-title">Music App Prototype</h3>
+                        <p class="card-description">A mobile UI/UX exploration in Figma focused on user flow, structural wireframing, and accessibility. The app 
+							prototype features an end-to-end design system with low-fidelity navigation flows and high-fidelity 'Dark' and 'Light' mode prototypes 
+							designed for seamless user personalization.</p>
+                        
+                        <div class="tech-tags">
+                            <span class="tag">Figma</span>
+                        </div>
+
+                        <a href="https://www.figma.com/proto/rUpmbuDDfkPoUlSTQwuVMY/MP3-App-Project?t=s3SxY49fUOWvyO6W-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=13-251&starting-point-node-id=13%3A251" target="_blank" class="card-btn">Launch Experiment</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	 </section>
+	<!-- Mini Experiment Section Ends-->
+
+    <!-- Footer Section Starts -->
+	 <footer>
+		<div class="footer-container">
+			<div class="footer-left">
+			    <img src="images/my brandmark b&w 2.png" alt="Samantha Piper Logo" class="footer-logo" />
+
+			    <div class="footer-info">
+			        <h3>Feel Like Getting In Contact:</h3>
+					<p>Phone: (207) 660-8045 | Email: <a href="mailto:sampiper119@gmail.com">sampiper119@gmail.com</a></p>
+				</div>
+			</div>
+
+			<div class="footer-right">
+				<div class="social-icons">
+					<a href="https://www.linkedin.com/in/samantha-piper-33660840b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+					<a href="mailto:sampiper119@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email"><i class="far fa-envelope-open"></i></a>
+				</div>
+			</div>
+		</div>
+	 </footer>
+	<!-- Footer Section Ends -->
+
+	<!-- Filter Bar JavaScript -->
+	 <script>
+		document.addEventListener('DOMContentLoaded', () => {
+		const filterButtons = document.querySelectorAll('.filter-btn');
+		const filterResetBtn = document.getElementById('filter-reset');
+		const allCards = document.querySelectorAll('.featured-card');
+		const sections = document.querySelectorAll('.featured-section');
+
+		// Function to filter cards
+		function filterProjects(filterValue) {
+			// Update active class on buttons
+			filterButtons.forEach(btn => {
+				if (btn.getAttribute('data-filter') === filterValue) {
+					btn.classList.add('active');
+				} else {
+					btn.classList.remove('active');
+				}
+			});
+
+			// Loop through all project cards across all sections
+			allCards.forEach(card => {
+				const cardCategories = card.getAttribute('data-category') || '';
+				const categoryBadgeText = card.querySelector('.category-badge')?.textContent.toLowerCase() || '';
+
+				if (filterValue === 'all') {
+					card.classList.remove('hide-card');
+				} else {
+					// Check match against data-category OR badge text content
+					const matchesCategory = cardCategories.includes(filterValue);
+					const matchesBadge = 
+						(filterValue === 'web' && categoryBadgeText.includes('web')) ||
+						(filterValue === 'interactive' && categoryBadgeText.includes('interactive')) ||
+						(filterValue === 'design' && categoryBadgeText.includes('visual')) ||
+						(filterValue === 'uiux' && (categoryBadgeText.includes('uiux') || categoryBadgeText.includes('product')));
+
+					if (matchesCategory || matchesBadge) {
+						card.classList.remove('hide-card');
+					} else {
+						card.classList.add('hide-card');
+					}
+				}
+			});
+
+			// Hide any section that has no projects left for this filter
+			sections.forEach(section => {
+				const visibleCards = section.querySelectorAll('.featured-card:not(.hide-card)').length;
+				const isEmpty = visibleCards === 0;
+
+				if (section.querySelector('.filter-bar-container')) {
+					// Featured section: keep the filter bar, hide only the title and grid
+					section.querySelector('.section-title').style.display = isEmpty ? 'none' : '';
+					section.querySelector('.featured-grid').style.display = isEmpty ? 'none' : '';
+				} else {
+					// Mini Experiments: hide the whole section (padding and background included)
+					section.style.display = isEmpty ? 'none' : '';
+				}
+			});
+		}
+
+		// Attach click listeners to filter buttons
+		filterButtons.forEach(button => {
+			button.addEventListener('click', () => {
+				const filterValue = button.getAttribute('data-filter');
+				filterProjects(filterValue);
+			});
+		});
+
+		// Reset button ("X") resets back to "All Projects"
+		if (filterResetBtn) {
+			filterResetBtn.addEventListener('click', () => {
+				filterProjects('all');
+			});
+		}
+	});
+ 	</script>
+
+	<!-- Hamburger menu toggle -->
+		<script src="nav.js"></script>
+</body>
+</html>
